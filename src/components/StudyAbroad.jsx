@@ -1,87 +1,79 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid';
-import RoundPassport from '../assets/jpg/round-passport.jpg';
-import TravelAndStudy from '../assets/jpg/travel-n-study.jpg';
-import Bg from '../assets/jpg/bgInStudy.jpg';
+import React from 'react';
+import Australia from '../assets/png/australia.png';
+import Canada from '../assets/png/canada.png';
+import France from '../assets/png/france.png';
+import Germany from '../assets/png/germany.png';
+import Ireland from '../assets/png/ireland.png';
+import Latvia from '../assets/png/latvia.png';
+import NewZealand from '../assets/png/new.png';
+import UK from '../assets/png/united-kingdom.png';
 
 const StudyAbroad = () => {
     return (
-        <div className="relative isolate overflow-hidden bg-cover bg-center" style={{ backgroundImage: `url(${Bg})` }}>
-            <div className="relative isolate overflow-hidden bg-white bg-opacity-80 px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
-                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
-                    <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-                        <div className="lg:pr-4">
-                            <div className="lg:max-w-lg">
-                                <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Study Abroad</h1>
-                                <p className="mt-6 text-xl leading-8 text-gray-700">
-                                    Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam
-                                    eget aliquam. Quisque id at vitae feugiat egestas.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="flex gap-10 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1">
-                        <div className="relative rounded-full overflow-hidden w-40 h-40">
-                            <img
-                                src={RoundPassport}
-                                alt="passport"
-                                className="object-cover object-center w-full h-full"
-                            />
-                        </div>
-                        <div className="relative rounded-xl overflow-hidden w-52 h-80">
-                            <img
-                                src={TravelAndStudy}
-                                alt="travel and study"
-                                className="object-cover object-center w-full h-full"
-                            />
-                        </div>
-                    </div>
+        <div className="container mx-auto flex flex-wrap items-center justify-between px-4">
+            <div className='w-full lg:w-1/2'>
+                <div className="mt-10 lg:mt-0">
+                    <h2 className="mb-4 text-3xl font-bold">
+                        Study Abroad
+                    </h2>
+                    <br></br>
+                    <br></br>
+                    <p className="mb-5 text-lg text-body-color dark:text-dark-6 text-left">
+                        Embark on an extraordinary educational adventure with Learnway's Study Abroad program.
+                        Our mission is to offer students unparalleled opportunities to gain global exposure, immerse themselves in rich and diverse cultures, and achieve academic excellence at some of the world's most prestigious universities.
+                        Experience a transformative journey that broadens your horizons, nurtures your personal growth, and equips you with a global perspective that sets you apart in today's interconnected world.
+                    </p>
                 </div>
-                <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-                    <div className="lg:pr-4">
-                        <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-                            <p>
-                                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-                                vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
-                                erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-                                semper sed amet vitae sed turpis id.
-                            </p>
-                            <ul role="list" className="mt-8 space-y-8 text-gray-600">
-                                <li className="flex gap-x-3">
-                                    <CloudArrowUpIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-indigo-600" />
-                                    <span>
-                                        <strong className="font-semibold text-gray-900">Push to deploy.</strong> Lorem ipsum, dolor sit amet
-                                        consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                                        blanditiis ratione.
-                                    </span>
-                                </li>
-                                <li className="flex gap-x-3">
-                                    <LockClosedIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-indigo-600" />
-                                    <span>
-                                        <strong className="font-semibold text-gray-900">SSL certificates.</strong> Anim aute id magna aliqua
-                                        ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
-                                    </span>
-                                </li>
-                                <li className="flex gap-x-3">
-                                    <ServerIcon aria-hidden="true" className="mt-1 h-5 w-5 flex-none text-indigo-600" />
-                                    <span>
-                                        <strong className="font-semibold text-gray-900">Database backups.</strong> Ac tincidunt sapien
-                                        vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
-                                    </span>
-                                </li>
-                            </ul>
-                            <p className="mt-8">
-                                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor
-                                fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac
-                                adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
-                            </p>
-                            <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">No server? No problem.</h2>
-                            <p className="mt-6">
-                                Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh.
-                                Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed
-                                tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam
-                                turpis ipsum eu a sed convallis diam.
-                            </p>
+            </div>
+            <div className='w-full  lg:w-1/2'>
+                <h2 className="mb-4 text-3xl font-bold">
+                    Popular Destinations
+                </h2>
+                <div>
+                    <br></br>
+                    <br></br>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+                        <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
+                            <div className="rounded-full border-2 border-black p-2">
+                                <img src={UK} alt="UK" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            </div>
+                            <span className="mt-2 text-sm sm:text-lg">UK</span>
+                        </div>
+                        <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
+                            <div className="rounded-full border-2 border-black p-2">
+                                <img src={France} alt="France" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            </div>
+                            <span className="mt-2 text-sm sm:text-lg">France</span>
+                        </div>
+                        <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
+                            <div className="rounded-full border-2 border-black p-2">
+                                <img src={Germany} alt="Germany" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            </div>
+                            <span className="mt-2 text-sm sm:text-lg">Germany</span>
+                        </div>
+                        <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
+                            <div className="rounded-full border-2 border-black p-2">
+                                <img src={Canada} alt="Canada" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            </div>
+                            <span className="mt-2 text-sm sm:text-lg">Canada</span>
+                        </div>
+                        <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
+                            <div className="rounded-full border-2 border-black p-2">
+                                <img src={Ireland} alt="Ireland" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            </div>
+                            <span className="mt-2 text-sm sm:text-lg">Ireland</span>
+                        </div>
+                        <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
+                            <div className="rounded-full border-2 border-black p-2">
+                                <img src={Australia} alt="Australia" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            </div>
+                            <span className="mt-2 text-sm sm:text-lg">Australia</span>
+                        </div>
+                        <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
+                            <div className="rounded-full border-2 border-black p-2">
+                                <img src={NewZealand} alt="New Zealand" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            </div>
+                            <span className="mt-2 text-sm sm:text-lg">New Zealand</span>
                         </div>
                     </div>
                 </div>

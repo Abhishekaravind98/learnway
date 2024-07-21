@@ -4,6 +4,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Logo from '../assets/png/logo.svg';
 import StudyAbroad from './StudyAbroad';
 
+import About from './About';
+import WhyChooseUs from './WhyChooseUs';
+
+
 const navigation = [
     { name: 'Study abroad', targetId: 'study-abroad' },
     { name: 'Study in India', targetId: 'study-in-india' },
@@ -88,8 +92,8 @@ export default function Courses() {
                     <Dialog.Panel className={`fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                         <div className="flex items-center justify-between">
                             <a href="#" className="-m-1.5 p-1.5">
-                                <span className="sr-only">Your Company</span>
-                                <img className="h-8 w-auto" src={Logo} alt="" />
+                                <span className="sr-only">Learnway</span>
+                                <img className="h-8 w-auto" src={Logo} alt="learnway" />
                             </a>
                             <button
                                 type="button"
@@ -113,14 +117,14 @@ export default function Courses() {
                                         </button>
                                     ))}
                                 </div>
-                                <div className="py-6">
+                                {/* <div className="py-6">
                                     <a
                                         href="#"
                                         className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                     >
                                         Log in
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </Dialog.Panel>
@@ -138,24 +142,31 @@ export default function Courses() {
                 </div>
                 <div className="mr-4 max-w-2xl py-32 sm:py-48 lg:py-56 text-left">
                     <div className="text-left">
-                        <h1 className="text-6xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                            Begin your education journey here
+                        <h1 className="text-7xl font-bold tracking-tight text-blue-900 sm:text-7xl">
+                            Begin your <span style={{ color: '#EF0000', border: 'white' }}>Education</span> journey here
                         </h1>
 
                         <div className="mt-10 flex items-center gap-x-6">
                             <a
                                 href="#"
-                                className="rounded-3xl bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                className="rounded-full bg-red-600 px-7 py-4 text-lg font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
                             >
                                 Apply now
                             </a>
-                            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                            <a href="#" className="text-lg font-semibold leading-6 text-gray-900">
                                 Learn more <span aria-hidden="true">→</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            {/* Why Choose Us Section */}
+            <section className="py-20">
+                <WhyChooseUs />
+            </section>
+
+
 
             {/* Add your sections here */}
             <section id="study-abroad" className="py-20">
@@ -173,8 +184,7 @@ export default function Courses() {
             </section>
 
             <section id="about-us" className="py-20">
-                <h2 className="text-3xl font-bold">About Us</h2>
-                <p className="mt-4 text-lg">Details about us.</p>
+                <About />
             </section>
 
             <section id="contact" className="py-20">
