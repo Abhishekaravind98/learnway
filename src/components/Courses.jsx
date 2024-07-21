@@ -140,7 +140,7 @@ export default function Courses() {
                         }}
                     />
                 </div>
-                <div className="mr-4 max-w-2xl py-32 sm:py-48 lg:py-56 text-left">
+                <div className="mr-4 max-w-2xl pt-32 pb-20 sm:pt-48 sm:pb-28 lg:pt-56 lg:pb-30 text-left">
                     <div className="text-left">
                         <h1 className="text-7xl font-bold tracking-tight text-blue-900 sm:text-7xl">
                             Begin your <span style={{ color: '#EF0000', border: 'white' }}>Education</span> journey here

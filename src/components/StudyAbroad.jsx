@@ -4,13 +4,13 @@ import Canada from '../assets/png/canada.png';
 import France from '../assets/png/france.png';
 import Germany from '../assets/png/germany.png';
 import Ireland from '../assets/png/ireland.png';
-import Latvia from '../assets/png/latvia.png';
 import NewZealand from '../assets/png/new.png';
 import UK from '../assets/png/united-kingdom.png';
 
 const StudyAbroad = () => {
     return (
         <div className="container mx-auto flex flex-wrap items-center justify-between px-4">
+
             <div className='w-full lg:w-1/2'>
                 <div className="mt-10 lg:mt-0">
                     <h2 className="mb-4 text-3xl font-bold">
