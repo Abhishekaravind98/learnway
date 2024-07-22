@@ -14,7 +14,7 @@ export function Footer() {
                         color="white"
                         className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
                     >
-                        Courses
+                        Study Abroad
                     </Typography>
                 </li>
                 <li>
@@ -24,7 +24,7 @@ export function Footer() {
                         color="white"
                         className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
                     >
-                        Study Abroad
+                        Test Preparation
                     </Typography>
                 </li>
                 <li>

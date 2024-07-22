@@ -6,6 +6,7 @@ import StudyAbroad from './StudyAbroad';
 
 import About from './About';
 import WhyChooseUs from './WhyChooseUs';
+import Contact from './Contact';
 
 
 const navigation = [
@@ -153,7 +154,7 @@ export default function Courses() {
                             >
                                 Apply now
                             </a>
-                            <a href="#" className="text-lg font-semibold leading-6 text-gray-900">
+                            <a href="#contact" className="text-lg font-semibold leading-6 text-gray-900">
                                 Learn more <span aria-hidden="true">→</span>
                             </a>
                         </div>
@@ -187,9 +188,8 @@ export default function Courses() {
                 <About />
             </section>
 
-            <section id="contact" className="py-20">
-                <h2 className="text-3xl font-bold">Contact</h2>
-                <p className="mt-4 text-lg">Contact details.</p>
+            <section id="contact" className="py-20 relative z-10  bg-white  dark:bg-dark lg:py-[120px]">
+                <Contact />
             </section>
 
             {showScroll && (
