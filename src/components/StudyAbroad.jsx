@@ -34,44 +34,44 @@ const StudyAbroad = () => {
                     <br></br>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
                         <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
-                            <div className="rounded-full border-2 border-black p-2">
-                                <img src={UK} alt="UK" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            <div className="rounded-full border-2 border-black p-1">
+                                <img src={UK} alt="UK" className="w-16 h-16 sm:w-20 sm:h-20 lg:w-20 lg:h-20" />
                             </div>
                             <span className="mt-2 text-sm sm:text-lg">UK</span>
                         </div>
                         <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
-                            <div className="rounded-full border-2 border-black p-2">
-                                <img src={France} alt="France" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            <div className="rounded-full border-2 border-black p-1">
+                                <img src={France} alt="France" className="w-16 h-16 sm:w-20 sm:h-20 lg:w-20 lg:h-20" />
                             </div>
                             <span className="mt-2 text-sm sm:text-lg">France</span>
                         </div>
                         <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
-                            <div className="rounded-full border-2 border-black p-2">
-                                <img src={Germany} alt="Germany" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            <div className="rounded-full border-2 border-black p-1">
+                                <img src={Germany} alt="Germany" className="w-16 h-16 sm:w-20 sm:h-20 lg:w-20 lg:h-20" />
                             </div>
                             <span className="mt-2 text-sm sm:text-lg">Germany</span>
                         </div>
                         <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
-                            <div className="rounded-full border-2 border-black p-2">
-                                <img src={Canada} alt="Canada" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            <div className="rounded-full border-2 border-black p-1">
+                                <img src={Canada} alt="Canada" className="w-16 h-16 sm:w-20 sm:h-20 lg:w-20 lg:h-20" />
                             </div>
                             <span className="mt-2 text-sm sm:text-lg">Canada</span>
                         </div>
                         <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
-                            <div className="rounded-full border-2 border-black p-2">
-                                <img src={Ireland} alt="Ireland" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            <div className="rounded-full border-2 border-black p-1">
+                                <img src={Ireland} alt="Ireland" className="w-16 h-16 sm:w-20 sm:h-20 lg:w-20 lg:h-20" />
                             </div>
                             <span className="mt-2 text-sm sm:text-lg">Ireland</span>
                         </div>
                         <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
-                            <div className="rounded-full border-2 border-black p-2">
-                                <img src={Australia} alt="Australia" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            <div className="rounded-full border-2 border-black p-1">
+                                <img src={Australia} alt="Australia" className="w-16 h-16 sm:w-20 sm:h-20 lg:w-20 lg:h-20" />
                             </div>
                             <span className="mt-2 text-sm sm:text-lg">Australia</span>
                         </div>
                         <div className="flex items-center justify-center flex-col mx-2 sm:mx-5">
-                            <div className="rounded-full border-2 border-black p-2">
-                                <img src={NewZealand} alt="New Zealand" className="w-16 h-16 sm:w-20 sm:h-20" />
+                            <div className="rounded-full border-2 border-black p-1">
+                                <img src={NewZealand} alt="New Zealand" className="w-16 h-16 sm:w-20 sm:h-20 lg:w-20 lg:h-20" />
                             </div>
                             <span className="mt-2 text-sm sm:text-lg">New Zealand</span>
                         </div>

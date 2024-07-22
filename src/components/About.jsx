@@ -5,7 +5,7 @@ const About = () => {
         <div className="bg-white py-16 px-6">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-wrap -mx-4">
-                    <div className="w-full lg:w-1/2 px-4">
+                    <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0"> {/* Added mb-8 for mobile spacing */}
                         <h2 className="mb-4 text-3xl font-bold">About Us</h2>
                         <p className="mt-4 text-lg leading-7 text-gray-700 text-left">
                             Learnway is dedicated to providing exceptional education and support to students aspiring to study abroad or in India.
@@ -19,7 +19,7 @@ const About = () => {
                             supportive community committed to your success.
                         </p>
                     </div>
-                    <div className="w-full lg:w-1/2 px-4">
+                    <div className="w-full lg:w-1/2 px-4"> {/* Removed the empty section */}
                         <h2 className="mb-4 text-3xl font-bold">Our Team</h2>
                         <p className="mt-4 text-lg leading-7 text-gray-700 text-left">
                             Our team consists of experienced education consultants, career counselors, and support staff who work together to

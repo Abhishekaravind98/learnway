@@ -3,11 +3,10 @@ import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Logo from '../assets/png/logo.svg';
 import StudyAbroad from './StudyAbroad';
-
 import About from './About';
 import WhyChooseUs from './WhyChooseUs';
 import Contact from './Contact';
-
+import StudyInIndia from './StudyInIndia';
 
 const navigation = [
     { name: 'Study abroad', targetId: 'study-abroad' },
@@ -20,6 +19,7 @@ const navigation = [
 export default function Courses() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [showScroll, setShowScroll] = useState(false);
+    const [menuAnimating, setMenuAnimating] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -32,6 +32,15 @@ export default function Courses() {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    useEffect(() => {
+        if (mobileMenuOpen) {
+            setMenuAnimating(true);
+        } else {
+            const timer = setTimeout(() => setMenuAnimating(false), 300); // Duration of the slide-out animation
+            return () => clearTimeout(timer);
+        }
+    }, [mobileMenuOpen]);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -88,50 +97,50 @@ export default function Courses() {
                         </a>
                     </div>
                 </nav>
-                <Dialog as="div" className={`lg:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`} open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-                    <div className="fixed inset-0 z-50 transition-opacity duration-300" />
-                    <Dialog.Panel className={`fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transition-transform duration-300 ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                        <div className="flex items-center justify-between">
-                            <a href="#" className="-m-1.5 p-1.5">
-                                <span className="sr-only">Learnway</span>
-                                <img className="h-8 w-auto" src={Logo} alt="learnway" />
-                            </a>
-                            <button
-                                type="button"
-                                className="-m-2.5 rounded-md p-2.5 text-gray-700"
-                                onClick={() => setMobileMenuOpen(false)}
-                            >
-                                <span className="sr-only">Close menu</span>
-                                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                            </button>
-                        </div>
-                        <div className="mt-6 flow-root">
-                            <div className="-my-6 divide-y divide-gray-500/10">
-                                <div className="space-y-2 py-6">
-                                    {navigation.map((item) => (
-                                        <button
-                                            key={item.name}
-                                            onClick={() => handleMobileMenuClick(item.targetId)}
-                                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                        >
-                                            {item.name}
-                                        </button>
-                                    ))}
-                                </div>
-                                {/* <div className="py-6">
-                                    <a
-                                        href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >
-                                        Log in
-                                    </a>
-                                </div> */}
+                {menuAnimating && (
+                    <Dialog
+                        as="div"
+                        className={`lg:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}
+                        open={mobileMenuOpen}
+                        onClose={setMobileMenuOpen}
+                    >
+                        <div className="fixed inset-0 z-50 transition-opacity duration-300" />
+                        <Dialog.Panel
+                            className={`fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transition-transform duration-300 ${mobileMenuOpen ? 'slide-in' : 'slide-out'}`}
+                        >
+                            <div className="flex items-center justify-between">
+                                <a href="#" className="-m-1.5 p-1.5">
+                                    <span className="sr-only">Learnway</span>
+                                    <img className="h-8 w-auto" src={Logo} alt="learnway" />
+                                </a>
+                                <button
+                                    type="button"
+                                    className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    <span className="sr-only">Close menu</span>
+                                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                                </button>
                             </div>
-                        </div>
-                    </Dialog.Panel>
-                </Dialog>
+                            <div className="mt-6 flow-root">
+                                <div className="-my-6 divide-y divide-gray-500/10">
+                                    <div className="space-y-2 py-6">
+                                        {navigation.map((item) => (
+                                            <button
+                                                key={item.name}
+                                                onClick={() => handleMobileMenuClick(item.targetId)}
+                                                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                            >
+                                                {item.name}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </Dialog.Panel>
+                    </Dialog>
+                )}
             </header>
-
             <div className="relative isolate px-6 pt-14 lg:px-8">
                 <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
                     <div
@@ -163,32 +172,29 @@ export default function Courses() {
             </div>
 
             {/* Why Choose Us Section */}
-            <section className="py-20">
+            <section className="py-10">
                 <WhyChooseUs />
             </section>
 
-
-
             {/* Add your sections here */}
-            <section id="study-abroad" className="py-20">
+            <section id="study-abroad" className="py-10">
                 <StudyAbroad />
             </section>
 
-            <section id="study-in-india" className="py-20">
-                <h2 className="text-3xl font-bold">Study in India</h2>
-                <p className="mt-4 text-lg">Details about studying in India.</p>
+            <section id="study-in-india" className="py-10">
+                <StudyInIndia />
             </section>
 
-            <section id="test-preparation" className="py-20">
+            <section id="test-preparation" className="py-10">
                 <h2 className="text-3xl font-bold">Test Preparation</h2>
                 <p className="mt-4 text-lg">Details about test preparation.</p>
             </section>
 
-            <section id="about-us" className="py-20">
+            <section id="about-us" className="py-10">
                 <About />
             </section>
 
-            <section id="contact" className="py-20 relative z-10  bg-white  dark:bg-dark lg:py-[120px]">
+            <section id="contact" className="py-10 relative z-10  bg-white  dark:bg-dark lg:py-[120px]">
                 <Contact />
             </section>
 
