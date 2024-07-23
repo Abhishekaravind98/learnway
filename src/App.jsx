@@ -10,7 +10,7 @@ import { Footer } from './components/Footer';
 
 function Home() {
   return (
-    <div className='App' >
+    <div className='App'  >
       {/* <div className="page-header header-filter" >
         <div className="squares square1" />
         <div className="squares square2" />
