@@ -9,6 +9,7 @@ import WhyChooseUs from './WhyChooseUs';
 import Contact from './Contact';
 import StudyInIndia from './StudyInIndia';
 import GradientBackground from './GradientBg';
+import TestPrep from './TestPrep';
 
 const navigation = [
     { name: 'Study abroad', targetId: 'study-abroad' },
@@ -68,7 +69,7 @@ export default function Courses() {
     };
 
     return (
-        <div className="bg-white   ">
+        <div className="bg-white">
             <header className="absolute  inset-x-0 top-0 z-50">
                 <nav className="bg-white flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                     <div className="flex lg:flex-1">
@@ -151,7 +152,7 @@ export default function Courses() {
             <div className="relative isolate px-6 pt-14 lg:px-8">
                 <GradientBackground />
                 <div className='flex flex-col lg:flex-row'>
-                    <div className="lg:basis-1/2 mr-4 max-w-2xl pt-32 pb-20 sm:pt-48 sm:pb-28 lg:pt-56 lg:pb-30 text-left">
+                    <div className="lg:basis-1/2 mr-4 max-w-2xl pt-20 pb-20 sm:pt-48 sm:pb-28 lg:pt-56 lg:pb-30 text-left">
                         <div className="text-left">
                             <h1 className="text-7xl font-bold tracking-tight text-blue-900 sm:text-7xl">
                                 Begin your <span style={{ color: '#EF0000', border: 'white' }}>Education</span> journey here
@@ -170,37 +171,36 @@ export default function Courses() {
                             </div>
                         </div>
                     </div>
-                    <div className='lg:basis-1/2 h-4/5 flex justify-center'>
-                        <img className='pt-10 lg:pt-32 w-80 sm:w-80 lg:w-80' src={WomenHoldingBook} alt="women studying abroad" />
+                    <div className='lg:basis-1/2 h-4/5 hidden md:flex justify-center'>
+                        <img className='pt-10 lg:pt-32  w-80 sm:w-80 lg:w-80' src={WomenHoldingBook} alt="women studying abroad" />
                     </div>
                 </div>
             </div>
 
             <GradientBackground className="bottom-0" style={{ bottom: '-10rem' }} />
             {/* Why Choose Us Section */}
-            <section className="py-10">
+            <section className="py-0 md:py-10">
                 <WhyChooseUs />
             </section>
 
             {/* Add your sections here */}
-            <section id="study-abroad" className="py-10">
+            <section id="study-abroad" className="py-0 md:py-10">
                 <StudyAbroad />
             </section>
 
-            <section id="study-in-india" className="py-10">
+            <section id="study-in-india" className="py-0 md:py-10">
                 <StudyInIndia />
             </section>
 
-            <section id="test-preparation" className="py-10">
-                <h2 className="text-3xl font-bold">Test Preparation</h2>
-                <p className="mt-4 text-lg">Details about test preparation.</p>
+            <section id="test-preparation" className="py-0 md:py-10">
+                <TestPrep />
             </section>
 
-            <section id="about-us" className="py-10">
+            <section id="about-us" className="py-0 md:py-10">
                 <About />
             </section>
 
-            <section id="contact" className="py-10 relative z-10  bg-white  dark:bg-dark lg:py-[120px]">
+            <section id="contact" className="py-0 md:py-10 relative z-10  bg-white  dark:bg-dark lg:py-[120px]">
                 <Contact />
             </section>
 
