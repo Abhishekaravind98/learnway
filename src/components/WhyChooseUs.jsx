@@ -1,5 +1,6 @@
 import RoundPassport from '../assets/jpg/round-passport.jpg';
 import TravelAndStudy from '../assets/jpg/travel-n-study.jpg';
+import People from '../assets/jpg/people_studying.jpg'
 import GradientLine from './GradientLine';
 
 const whyChooseUs = () => {
@@ -11,7 +12,7 @@ const whyChooseUs = () => {
                         <div className="w-full px-3 sm:px-4 xl:w-1/2">
                             <div className="py-3 sm:py-4">
                                 <img
-                                    src="https://i.ibb.co/gFb3ns6/image-1.jpg"
+                                    src={People}
                                     alt=""
                                     className="w-full rounded-2xl"
                                 />

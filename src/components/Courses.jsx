@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Logo from '../assets/png/logo.svg';
-import WomenHoldingBook from '../assets/png/women.png'
+import WomenHoldingBook from '../assets/png/women.png';
+import Youngster from '../assets/jpg/youngsters.jpg';
 import StudyAbroad from './StudyAbroad';
 import About from './About';
 import WhyChooseUs from './WhyChooseUs';
@@ -70,7 +71,7 @@ export default function Courses() {
 
     return (
         <div className="bg-white">
-            <header className="absolute  inset-x-0 top-0 z-50">
+            <header className="absolute inset-x-0 top-0 z-50">
                 <nav className="bg-white flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                     <div className="flex lg:flex-1">
                         <a onClick={reloadPage} className="-m-1.5 p-1.5">
@@ -101,7 +102,7 @@ export default function Courses() {
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                         <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                            <span aria-hidden="true">&rarr;</span>
+                            <span aria-hidden="true"></span>
                         </a>
                     </div>
                 </nav>
@@ -149,10 +150,29 @@ export default function Courses() {
                     </Dialog>
                 )}
             </header>
+
             <div className="relative isolate px-6 pt-14 lg:px-8">
-                <GradientBackground />
-                <div className='flex flex-col lg:flex-row'>
-                    <div className="lg:basis-1/2 mr-4 max-w-2xl pt-20 pb-20 sm:pt-48 sm:pb-28 lg:pt-56 lg:pb-30 text-left">
+                <div className='block md:hidden lg:hidden'><GradientBackground /></div>
+                <div className="absolute inset-0 -z-10 flex items-center">
+                    <img
+                        src={Youngster}
+                        alt="Background"
+                        className="w-50 lg:w-full md:w-full h-full pt-20 object-cover hidden lg:block md:block  lg:object-contain md:object-contain opacity-100"
+                        style={{
+                            filter: 'blur(0px)',
+                            position: 'absolute',
+                            right: -100,
+                            top: 0,
+                            width: '100%',
+                        }}
+                    />
+                    <div
+                        className="absolute inset-0 "
+                        style={{ width: '100%' }}
+                    ></div>
+                </div>
+                <div className="relative flex flex-col lg:flex-row">
+                    <div className="relative z-10 lg:basis-1/2 mr-4 max-w-2xl pt-20 pb-20 sm:pt-48 sm:pb-28 lg:pt-56 lg:pb-30 text-left">
                         <div className="text-left">
                             <h1 className="text-7xl font-bold tracking-tight text-blue-900 sm:text-7xl">
                                 Begin your <span style={{ color: '#EF0000', border: 'white' }}>Education</span> journey here
@@ -171,13 +191,10 @@ export default function Courses() {
                             </div>
                         </div>
                     </div>
-                    <div className='lg:basis-1/2 h-4/5 hidden md:flex justify-center'>
-                        <img className='pt-10 lg:pt-32  w-80 sm:w-80 lg:w-80' src={WomenHoldingBook} alt="women studying abroad" />
-                    </div>
                 </div>
             </div>
 
-            <GradientBackground className="bottom-0" style={{ bottom: '-10rem' }} />
+
             {/* Why Choose Us Section */}
             <section className="py-0 md:py-10">
                 <WhyChooseUs />
@@ -200,7 +217,7 @@ export default function Courses() {
                 <About />
             </section>
 
-            <section id="contact" className="py-0 md:py-10 relative z-10  bg-white  dark:bg-dark lg:py-[120px]">
+            <section id="contact" className="py-0 md:py-10 bg-white dark:bg-dark lg:py-[120px]">
                 <Contact />
             </section>
 

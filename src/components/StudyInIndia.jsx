@@ -27,16 +27,9 @@ export default function StudyInIndia() {
                             <GradientLine />
                         </div>
                         <p className="text-lg mb-4 md:mb-6 text-left">
-                            India is home to some of the world's oldest universities and offers a diverse range of educational opportunities.
-                            Whether you are interested in technology, humanities, sciences, or arts, you can find a program that suits your
-                            interests and career goals.
+                            At Learnway Consultants, we specialize in guiding students and parents through the complex process of  College admissions in Karnataka, Tamilnadu and Kerala. Our expert team provides personalized support, from selecting the best educational institutions to  admission procedures. With deep knowledge of domestic educational landscape and a track record of successful placements, we ensure that every student finds the right fit for their academic and career aspirations. Trust us to make your admission journey smooth and stress-free.
                         </p>
-                        <h3 className="text-2xl font-semibold mb-4 text-left">Why Choose India?</h3>
-                        <p className="text-lg mb-4 md:mb-6 text-left">
-                            Studying in India provides you with a rich cultural experience, access to world-class education, and opportunities
-                            to engage with innovative research and technology. Additionally, the cost of education in India is relatively affordable
-                            compared to other countries.
-                        </p>
+
                         <p className="text-lg mb-4 md:mb-6 text-left">
                             For more information on studying in India, please contact our admissions office.
                         </p>
