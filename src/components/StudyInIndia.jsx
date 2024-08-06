@@ -37,16 +37,6 @@ export default function StudyInIndia() {
                             to engage with innovative research and technology. Additionally, the cost of education in India is relatively affordable
                             compared to other countries.
                         </p>
-                        <h3 className="text-2xl text-left font-semibold mb-4">Application Process</h3>
-                        <p className="text-lg mb-4 md:mb-6 text-left">
-                            To apply to Indian universities, you will need to complete the following steps:
-                        </p>
-                        <ol className="list-decimal list-inside mb-4 md:mb-6 text-left">
-                            <li>Research programs and universities that interest you.</li>
-                            <li>Prepare your application materials, including transcripts, test scores, and recommendation letters.</li>
-                            <li>Submit your application through the university's online portal.</li>
-                            <li>Wait for the admission decision and follow the instructions provided by the university.</li>
-                        </ol>
                         <p className="text-lg mb-4 md:mb-6 text-left">
                             For more information on studying in India, please contact our admissions office.
                         </p>

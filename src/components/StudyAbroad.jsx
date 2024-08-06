@@ -35,7 +35,7 @@ const StudyAbroad = () => {
                         </div>
                         <br></br>
                         <br></br>
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4  md:gap-6 sm:gap-6">
                             {[
                                 { src: UK, alt: "UK", label: "UK" },
                                 { src: France, alt: "France", label: "France" },
@@ -47,9 +47,9 @@ const StudyAbroad = () => {
                             ].map((destination, index) => (
                                 <div key={index} className="flex items-center justify-center flex-col mx-2 sm:mx-5">
                                     <div className="rounded-full border-2 border-black p-1">
-                                        <img src={destination.src} alt={destination.alt} className="w-16 h-16 sm:w-20 sm:h-20 lg:w-20 lg:h-20" />
+                                        <img src={destination.src} alt={destination.alt} className="w-16 h-16 md:w-20 md:h-20 sm:w-20 sm:h-20 lg:w-20 lg:h-20" style={{ width: '55px', height: '55px' }} />
                                     </div>
-                                    <span className="mt-2 text-sm sm:text-lg">{destination.label}</span>
+                                    <span className="mt-2 text-lg lg:text-xl">{destination.label}</span>
                                 </div>
                             ))}
                         </div>
