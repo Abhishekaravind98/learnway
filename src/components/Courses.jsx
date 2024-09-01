@@ -222,7 +222,7 @@ export default function Courses() {
                 <Contact />
             </section>
             <a
-                href="https://wa.me/+917034342414?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20products."
+                href="https://wa.me/+917034342414?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fixed bottom-20 right-5 z-50 flex items-center p-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-colors"
