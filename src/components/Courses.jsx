@@ -11,6 +11,7 @@ import Contact from './Contact';
 import StudyInIndia from './StudyInIndia';
 import GradientBackground from './GradientBg';
 import TestPrep from './TestPrep';
+import { ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
     { name: 'Study abroad', targetId: 'study-abroad' },
@@ -220,10 +221,18 @@ export default function Courses() {
             <section id="contact" className="py-0 md:py-10 bg-white dark:bg-dark lg:py-[120px]">
                 <Contact />
             </section>
-
+            <a
+                href="https://wa.me/+917034342414?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20products."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fixed bottom-20 right-5 z-50 flex items-center p-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-colors"
+            >
+                <ChatBubbleLeftRightIcon className="h-6 w-6 md:h-8 md:w-8 mr-0 md:mr-2" />
+                <span className="hidden md:inline">Chat with us</span>
+            </a>
             {showScroll && (
                 <button
-                    className="fixed bottom-8 right-8 bg-gray-900 text-white p-3 rounded-full shadow-lg hover:bg-gray-800"
+                    className="fixed bottom-5 right-5 bg-gray-900 text-white p-3 rounded-full shadow-lg hover:bg-gray-800"
                     onClick={scrollToTop}
                     aria-label="Scroll to top"
                 >

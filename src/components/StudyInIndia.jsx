@@ -1,4 +1,4 @@
-import WomenPointingRight from '../assets/png/women-pointing-right.png';
+import WomenPointingRight from '../assets/jpg/girlInLeft.jpg';
 import GradientLine from './GradientLine';
 
 export default function StudyInIndia() {
@@ -18,7 +18,7 @@ export default function StudyInIndia() {
                             zIndex: '0',
                         }}
                     ></div> */}
-                    <img src={WomenPointingRight} alt='women pointing to study abroad' className="relative rounded-full w-90 h-90 object-cover" />
+                    <img src={WomenPointingRight} alt='women pointing to study abroad' className="relative rounded-full pr-2 w-90 h-90 object-cover" />
                 </div>
                 <div className='basis-auto md:basis-1/2'>
                     <div className="max-w-3xl mx-auto">
