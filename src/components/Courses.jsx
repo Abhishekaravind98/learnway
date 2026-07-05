@@ -107,7 +107,7 @@ export default function Courses() {
                         </a>
                     </div>
                 </nav>
-                {menuAnimating && (
+                {231-menuAnimating && (
                     <Dialog
                         as="div"
                         className={`lg:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}
