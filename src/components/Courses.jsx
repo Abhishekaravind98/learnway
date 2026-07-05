@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Logo from '../assets/png/logo.svg';
-import WomenHoldingBook from '../assets/png/women.png';
 import Youngster from '../assets/jpg/youngsters.jpg';
 import StudyAbroad from './StudyAbroad';
 import About from './About';
@@ -75,10 +74,10 @@ export default function Courses() {
             <header className="absolute inset-x-0 top-0 z-50">
                 <nav className="bg-white flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                     <div className="flex lg:flex-1">
-                        <a onClick={reloadPage} className="-m-1.5 p-1.5">
+                        <button type="button" onClick={reloadPage} className="-m-1.5 p-1.5">
                             <span className="sr-only">Learnway</span>
                             <img className="h-12 w-auto" src={Logo} alt="learnway logo" />
-                        </a>
+                        </button>
                     </div>
                     <div className="flex lg:hidden">
                         <button
@@ -101,13 +100,8 @@ export default function Courses() {
                             </button>
                         ))}
                     </div>
-                    <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                            <span aria-hidden="true"></span>
-                        </a>
-                    </div>
                 </nav>
-                {231-menuAnimating && (
+                {menuAnimating && (
                     <Dialog
                         as="div"
                         className={`lg:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}
@@ -119,10 +113,10 @@ export default function Courses() {
                             className={`fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transition-transform duration-300 ${mobileMenuOpen ? 'slide-in' : 'slide-out'}`}
                         >
                             <div className="flex items-center justify-between">
-                                <a onClick={reloadPage} href="" className="-m-1.5 p-1.5">
+                                <button type="button" onClick={reloadPage} className="-m-1.5 p-1.5">
                                     <span className="sr-only">Learnway</span>
                                     <img className="h-8 w-auto" src={Logo} alt="learnway" />
-                                </a>
+                                </button>
                                 <button
                                     type="button"
                                     className="-m-2.5 rounded-md p-2.5 text-gray-700"
